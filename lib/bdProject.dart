@@ -15,7 +15,7 @@ Future<MySqlConnection> createConnection() async {
 
 Future<void> createTable(MySqlConnection conn) async{
   print('Criando Tabela...');
-  await conn.execute('CREATE TABLE IF NOT EXISTS pessoa (id INTEGER NOT NULL auto_increment, nome VARCHAR(255), idade INTEGER, email VARCHAR(255), PRIMARY KEY(id)  )');
+  await conn.execute('CREATE TABLE IF NOT EXISTS pessoa (id INTEGER NOT NULL auto_increment, nome VARCHAR(255), idade INTEGER, email VARCHAR(255), PRIMARY KEY(id))');
   print('Tabela criada com sucess!!!');
 }
 
@@ -48,5 +48,10 @@ Future<void> removeData(MySqlConnection conn) async {
 
 Future<void> dropTable(MySqlConnection conn) async {
   print('\nExcluindo Tabela...');
-  await conn.execute('DROP TABLE IF EXISTS pessoa');
+  await conn.execute('DROP TABLE IF EXISTS cavalo, pessoa');
+}
+
+Future<void> createTables(MySqlConnection conn) async {
+  await conn.execute('CREATE TABLE IF NOT EXISTS pessoa (id INTEGER NOT NULL auto_increment, nome VARCHAR(255), idade INTEGER, email VARCHAR(255), PRIMARY KEY(id))');
+  await conn.execute('CREATE TABLE IF NOT EXISTS cavalo (id INTEGER NOT NULL auto_increment, pessoa_id INTEGER NOT NULL, PRIMARY KEY (id), FOREIGN KEY (pessoa_id) REFERENCES pessoa(id))');
 }
