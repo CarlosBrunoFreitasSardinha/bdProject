@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="956ce929-ac85-459d-8548-f213d2fd1abd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bdProject.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bdProject.dart" afterDir="false" />
-    </list>
+    <list default="true" id="956ce929-ac85-459d-8548-f213d2fd1abd" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,6 +90,10 @@
       <screen x="0" y="0" width="1268" height="768" />
     </state>
     <state width="1225" height="239" key="GridCell.Tab.1.right/0.0.1268.768/1366.0.1218.1024@0.0.1268.768" timestamp="1585930767805" />
+    <state x="16" y="108" key="new project wizard" timestamp="1586109622240">
+      <screen x="0" y="0" width="1268" height="768" />
+    </state>
+    <state x="16" y="108" key="new project wizard/0.0.1268.768/1366.0.1218.1024@0.0.1268.768" timestamp="1586109622240" />
     <state x="290" y="37" width="672" height="676" key="search.everywhere.popup" timestamp="1586094644588">
       <screen x="0" y="0" width="1268" height="768" />
     </state>
