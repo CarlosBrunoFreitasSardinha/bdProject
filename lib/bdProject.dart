@@ -150,7 +150,7 @@ Future<void> insertData(MySqlConnection conn) async {
 
 Future<void> createBD2(MySqlConnection conn) async {
   // ignore: omit_local_variable_types
-  String procedure = "CREATE PROCEDURE updateBanana() BEGIN UPDATE produto SET descricao = 'Banana' where id = 3; END";
+  String procedure = "CREATE PROCEDURE alterDp(IN i INT, IN d varchar(255),IN p INT) BEGIN UPDATE produto SET descricao = d where id = i;UPDATE produto SET preco = p where id = i; END";
 
   // ignore: omit_local_variable_types 
   String trigger =
@@ -196,7 +196,7 @@ Future<void> useProcedure(MySqlConnection conn) async {
 
   try {
 
-    await transaction.execute('CALL updateBanana();');
+    await transaction.execute('CALL alterDp(2,"tomate",22);');
     await transaction.commit();
 
   } catch(e) {
@@ -208,7 +208,7 @@ Future<void> useProcedure(MySqlConnection conn) async {
 
 Future<void> dropBD2(MySqlConnection conn) async {
   print('Excluindo recursos passados...\n');
-  await conn.execute('DROP PROCEDURE IF EXISTS updateBanana;');
+  await conn.execute('DROP PROCEDURE IF EXISTS alterDp;');
   await conn.execute('DROP TRIGGER IF EXISTS auto_update;');
   await conn.execute('DROP VIEW IF EXISTS todasAsPessoas;');
   await conn.execute('DROP FUNCTION IF EXISTS GETFULLNAME;');
